@@ -1,0 +1,16 @@
+<html>
+
+<body id="flipper">
+    <p id="text" style="font-size:50px">Background Color: <span id="color">red</span> </p>
+    <button id="btn" style="padding: 14px 28px;" onclick="perform()">Flip color!</button>
+    <script>
+        function perform() {
+            let showingColor = document.getElementById('color');
+            const color = showingColor.innerText === 'red' ? 'green' : 'red';
+            showingColor.innerHTML = color;
+            document.getElementById('flipper').style.backgroundColor = color;
+        }
+    </script>
+</body>
+
+</html>
