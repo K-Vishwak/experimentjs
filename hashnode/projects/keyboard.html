@@ -1,0 +1,32 @@
+<html>
+
+<body>
+</body>
+<script>
+
+    for (let i = 65; i <= 90; i++) {
+        const button = document.createElement('button');
+        const char = String.fromCharCode(i);
+        const span = document.createElement('span');
+        span.style.fontSize = '50px';
+        span.appendChild(document.createTextNode(char));
+        button.appendChild(span);
+        document.body.appendChild(button);
+        button.setAttribute('id', char);
+        button.style.padding = '30px';
+        button.style.margin = '10px';
+        button.onclick = function () { getLetter(char) };
+    }
+    function getLetter(id) {
+        const speech = new SpeechSynthesisUtterance();
+        const letter = document.getElementById(id).textContent;
+        speech.text = letter;
+        window.speechSynthesis.speak(speech);
+        const p = document.createElement('p');
+        p.style.fontSize = '30px';
+        p.innerHTML = letter;
+        document.body.appendChild(p);
+    }
+</script>
+
+</html>
