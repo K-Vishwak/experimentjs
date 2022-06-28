@@ -1,0 +1,71 @@
+<style>
+    img::before {
+        background-color: hsl(0, 0%, 93.3%);
+        border: 1px dashed hsl(0, 0%, 66.7%);
+        display: block;
+        height: 100%;
+        border-radius: 4px;
+        content: "";
+        position: absolute;
+        width: 100%;
+    }
+
+    img::after {
+        content: attr(alt);
+        font-weight: bold;
+        position: absolute;
+        height: 100%;
+        left: 0px;
+        text-align: center;
+        top: 1px;
+        width: 100%;
+    }
+
+    img {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .card {
+        background-color: hsl(0, 0%, 100%);
+        border: 1px solid hsl(0, 0%, 85.1%);
+        border-radius: 6px;
+        box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
+        margin: 2em auto;
+        max-width: 18.75em;
+        overflow: hidden;
+    }
+
+    .card-content {
+        padding: 1em;
+    }
+
+    .card-body {
+        font-size: 1.1em;
+        letter-spacing: 0.04em;
+    }
+</style>
+
+<div class="container">
+    <div class="flex">
+        <div class="card">
+            <img src="https://i.imgur.com/jFKonXQ.jpeg" alt="Red and white Chevrolet" width="300" height="200" />
+            <div class="card-content">
+                <h2 class="card-title">Chevrolet</h2>
+                <p class="card-body">I am really fast car</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex">
+        <div class="card">
+            <!-- Image broken by deleting the parts of the image extension -->
+            <img src="https://i.imgur.com/jFKonXQ.jp" alt="Red and white Chevrolet" width="300" height="200" />
+            <div class="card-content">
+                <h2 class="card-title">Chevrolet</h2>
+                <p class="card-body">I am broken car</p>
+            </div>
+        </div>
+    </div>
+</div>

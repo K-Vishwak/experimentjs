@@ -1,0 +1,99 @@
+<style>
+    div {
+        /* top: 50%; */
+    }
+
+    .fixed {
+        position: fixed;
+        top: 21.5%;
+    }
+
+    .static {
+        position: static;
+    }
+
+    .relative {
+        position: relative;
+    }
+
+    .center {
+        margin: auto;
+        width: 50%;
+        /* height: 50%; */
+        border: 3px solid green;
+        padding: 10px;
+    }
+
+    .relative1 {
+        position: relative;
+        top: 50%;
+        border: solid 1px red;
+        padding: 30px;
+    }
+
+    .sticky {
+        position: sticky;
+    }
+
+    .absolute {
+        position: absolute;
+    }
+
+    .div1,
+    .div2,
+    .div3 {
+        position: absolute;
+        border: solid 1px green;
+        padding: 15px 10px;
+        top: 0%;
+        bottom: 0%;
+    }
+
+    .div1 {
+        left: 0%;
+    }
+
+    .div2 {
+        left: 50%;
+    }
+
+    .div3 {
+        right: 0%;
+    }
+</style>
+
+<div class="fixed">
+    fixed
+</div>
+
+<div class="static">
+    static
+</div>
+
+<div class="relative">
+    relative
+</div>
+
+<div class="sticky">
+    sticky
+</div>
+
+<div class="absolute">
+    absolute
+</div>
+
+<div class="relative1">
+    <div class="div1">
+        div1
+    </div>
+    <div class="div2">
+        div2
+    </div>
+    <div class="div3">
+        div3
+    </div>
+</div>
+
+<div class="center">
+    center div
+</div>
