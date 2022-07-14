@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <div id="parent">
+            <button>
+                <p>Parent</p>
+            </button>
+            <button id="child">
+                <p>child</p>
+            </button>
+        </div>
+        <script>
+        document.getElementById('parent').addEventListener("click", function() {
+            console.log('Its a parent');
+        }, false)
+        document.getElementById('child').addEventListener("click", function() {
+            console.log('Its a child');
+        }, false)
+        </script>
+    </body>
+</html>
