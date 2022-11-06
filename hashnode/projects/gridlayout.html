@@ -1,0 +1,43 @@
+<style>
+    .child1 {
+        grid-area: header;
+    }
+
+    .child2 {
+        grid-area: main;
+    }
+
+    .child3 {
+        grid-area: sidebar;
+    }
+
+    .child4 {
+        grid-area: footer;
+    }
+
+    .parent {
+        display: grid;
+        /* grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end]; */
+        /* grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line]; */
+        /* grid-template-rows: [row1-start] 25% [row1-end row2-start] 25% [row2-end]; */
+        /* grid-template-columns: repeat(3, 20px [col-start]); */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: auto;
+        grid-template-areas: "header header header header"
+            "main main . sidebar"
+            "footer footer footer footer";
+    }
+</style>
+
+<div class="parent">
+    <div class="child1">child1</div>
+    <div class="child2">child2</div>
+    <div class="child3">child3</div>
+    <div class="child4">child4</div>
+    <!-- <div class="child">child5</div>
+    <div class="child">child6</div>
+    <div class="child">child7</div>
+    <div class="child">child8</div>
+    <div class="child">child9</div> -->
+</div>

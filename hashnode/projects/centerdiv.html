@@ -1,0 +1,111 @@
+<style>
+    /* Using flex and margin: auto */
+    .parent {
+        display: flex;
+
+        background-color: aqua;
+        width: 400px;
+        height: 400px;
+    }
+
+    .child {
+        margin: auto;
+
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Using grid and margin: auto */
+    .parent {
+        display: grid;
+
+        background-color: aqua;
+        width: 400px;
+        height: 400px;
+    }
+
+    .child {
+        margin: auto;
+
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+
+    /* relative parent and absolute child with margin auto */
+    .parent {
+        position: relative;
+
+        background-color: aqua;
+        width: 400px;
+        height: 400px;
+    }
+
+    .child {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Using alin-items and justify-items in grid */
+    .parent {
+        display: grid;
+
+        /* we can also use place-items: center */
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* Using align-self and justify-self using grid */
+
+    .parent {
+        display: grid;
+    }
+
+    .child {
+        align-self: center;
+        justify-self: center;
+    }
+
+    /* Using flex with algin and justify */
+    .parent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Using flex with align-self and justify content */
+
+    .parent {
+        display: flex;
+        justify-content: center;
+    }
+
+    .child {
+        align-self: ceter;
+    }
+
+    /* Using relative parent and absolute child */
+
+    .parent {
+        position: relative;
+    }
+
+    .child {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<div class="parent">
+    <div class="child"></div>
+</div>

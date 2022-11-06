@@ -1,0 +1,16 @@
+<div id="parent">First
+    <div onclick="childClick()" id="child">test1</div>
+</div>
+
+<script>
+    document.getElementById('parent').addEventListener('click', parentClick, true);
+    document.getElementById('child').addEventListener('click', parentClick, true);
+
+    function parentClick() {
+        console.log('parent click');
+    }
+
+    function childClick() {
+        console.log('child click');
+    }
+</script>

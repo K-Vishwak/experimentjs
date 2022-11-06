@@ -1,0 +1,21 @@
+let obj = {
+    prop1: 'first',
+    prop2: 'second',
+    getProps: function() {
+        return this.prop1 + ' ' + this.prop2
+    } 
+}
+
+console.log(obj.getProps());
+
+let props = obj.getProps;
+console.log(props());
+
+let obj1 = {
+    prop1: 'first',
+    prop2: 'second',
+    getProps: () => this.prop1 + ' ' + this.prop2
+}
+
+const anotherObj = obj1.getProps();
+console.log(anotherObj);

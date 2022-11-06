@@ -1,0 +1,59 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li {
+        border: 1px solid #ddd;
+        margin-top: -1px;
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block;
+        position: relative;
+    }
+
+    ul li:hover {
+        background-color: #eee;
+    }
+
+    .close {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        padding: 12px 16px;
+        transform: translate(0%, -50%);
+    }
+
+    .close:hover {
+        background: #bbb;
+    }
+</style>
+
+<ul>
+    <li>Adele</li>
+    <li>Adele<span class="close">x</span></li>
+    <li>Billy<span class="close">x</span></li>
+    <li>Bob<span class="close">x</span></li>
+    <li>Calvin<span class="close">x</span></li>
+    <li>Christina<span class="close">x</span></li>
+    <li>Cindy<span class="close">x</span></li>
+</ul>
+
+<script>
+    let closeBtns = document.getElementsByClassName('close');
+    for (let i = 0; i < closeBtns.length; i++) {
+        closeBtns[i].addEventListener('click', function () {
+            this.parentElement.style.display = 'none';
+        })
+    }
+</script>

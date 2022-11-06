@@ -1,0 +1,37 @@
+<style>
+    .chip {
+        display: inline-block;
+        padding: 0 25px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        border-radius: 25px;
+        background-color: #f1f1f1;
+    }
+
+    .chip img {
+        float: left;
+        margin: 0 10px 0 -25px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .closeBtn {
+        padding-left: 10px;
+        color: #888;
+        font-weight: bold;
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .closeBtn:hover {
+        color: #000;
+    }
+</style>
+
+<div class="chip">
+    <img src="https://www.w3schools.com/howto/img_avatar.png" width="96" height="96" alt="Person">John Doe
+    <span class="closeBtn" onclick="this.parentElement.style.display = 'none'">&times;</span>
+</div>

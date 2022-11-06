@@ -1,0 +1,104 @@
+<style>
+    .left {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        margin: 0;
+    }
+
+    .left-tooltip {
+        display: none;
+        position: absolute;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+        width: 80px;
+        /* top: -20%;
+        left: 150%; */
+    }
+
+    .left:hover .left-tooltip {
+        display: block;
+    }
+
+    .right {
+        position: fixed;
+        right: 0;
+        top: 50%;
+        margin: 0;
+    }
+
+    .top {
+        margin: auto;
+        position: fixed;
+        top: 0%;
+        left: 50%;
+    }
+
+    .bottom {
+        margin: auto;
+        position: fixed;
+        bottom: 0%;
+        left: 50%;
+    }
+
+    .left-corner {
+        left: 0%;
+        top: 0%;
+        position: fixed;
+        margin: 0;
+    }
+
+    .right-corner {
+        right: 0%;
+        top: 0%;
+        position: fixed;
+        margin: 0;
+    }
+
+    .bottom-left-corner {
+        bottom: 0%;
+        left: 0%;
+        position: fixed;
+        margin: 0;
+    }
+
+    .bottom-right-corner {
+        bottom: 0%;
+        right: 0%;
+        position: fixed;
+        margin: 0;
+    }
+
+    .center {
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        position: fixed;
+    }
+</style>
+
+<p class="left" id="left">Left
+    <span id="leftTooltip" class="left-tooltip">Left Tooltip</span>
+</p>
+<p class="right">right</p>
+<p class="top">top</p>
+<p class="bottom">bottom</p>
+
+<p id="left-corner" class="left-corner">Left Corner</p>
+<p class="right-corner">right Corner</p>
+<p id="bottom-left-corner" class="bottom-left-corner">bottom left corner</p>
+<p class="bottom-right-corner">bottom right corner</p>
+
+<p class="center">Center</p>
+
+<script>
+    const leftItems = [document.getElementById('left'), document.getElementById('left-corner'), document.getElementById('bottom-left-corner')];
+    leftItems.forEach(item => {
+        if (item.scrollLeft === 0) {
+            document.getElementById('leftTooltip').style.top = '-20%';
+            document.getElementById('leftTooltip').style.left = '150%';
+        }
+    })
+</script>
