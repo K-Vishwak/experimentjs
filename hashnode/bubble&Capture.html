@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: solid 1px red;
+        width: 20px;
+        height: 20px;
+      }
+
+      .parent {
+        width: 200px;
+        height: 200px;
+      }
+      .child1,
+      .child2 {
+        width: 50px;
+        height: 50px;
+      }
+      .child12 {
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent" id="parent">
+      parent
+      <!-- <div class="child1" onclick="child1Click();">
+        child1
+        <div class="child12" onclick="child12Click();">child12</div>
+      </div> -->
+      <div class="child2" id="child2">child2</div>
+    </div>
+    <script>
+      //   const child2 = document.getElementById("child2").addEventListener(
+      //     "click",
+      //     () => {
+      //       console.log("child2clicked");
+      //     },
+      //     true
+      //   );
+
+      //   const parent = document
+      //     .getElementById("parent")
+      //     .addEventListener("click", () => {
+      //       console.log("parent clicked");
+      //     });
+      //   function child2Click(event) {
+      //     console.log("Child 2 clicked");
+      //     event.stopPropagation();
+      //     // event.preventDefault();
+      //   }
+
+      //   function child12Click() {
+      //     console.log("Child 12 clicked");
+      //   }
+      //   function child1Click() {
+      //     console.log("Child 1 clicked");
+      //   }
+      //   function parentClick(event) {
+      //     console.log("Parent clicked" + event.currentTarget.id);
+      //   }
+
+      const parentElement = document.getElementById("parent");
+
+      const clickHandler = (event) => {
+        // Check if the clicked element has a specific ID
+        if (event.target.id && event.target.id.startsWith("child2")) {
+          // Handle the click on the child div with a matching ID
+          console.log("Clicked on:", event.target.id);
+        } else {
+          console.log("Click on: ", event.target.id);
+        }
+      };
+
+      // Add the event listener to the parent element
+      parentElement.addEventListener("click", clickHandler);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .html-validation {
+        margin: auto;
+        width: 30%;
+        border: 1px solid green;
+        box-shadow: 5px 5px 8px green;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    label {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: block;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0px;
+        border-radius: 10px;
+    }
+
+    span {
+        color: red;
+    }
+</style>
+<form class="html-validation" onsubmit="return onSubmit()">
+    <label for="userName">User Name</label>
+    <input id="userName" name="userName" type="text">
+    <span id="userErrorMsg"></span>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <span id="pwdErrorMsg"></span>
+    <input type="submit">
+</form>
+
+<script>
+    function onSubmit() {
+        const userName = document.getElementById('userName');
+        const password = document.getElementById('password');
+        if (!userName.value || userName.value.length < 3) {
+            document.getElementById('userErrorMsg').textContent = 'User Name must be greater than 2 letters.';
+            return false;
+        } else  {
+            userName.textContent = userName.value;
+            return true;
+        }
+        if (!password.value || password.value.length < 3 || (password.value.match(/[a-z]/g) && password.value.match(/[A-Z]/g))) {
+            document.getElementById('pwdErrorMsg').textContent = 'Password must be greater than 2 letters and must include at least 1 upper case and 1 lower case letter.';
+            return false;
+        }
+    }
+</script>

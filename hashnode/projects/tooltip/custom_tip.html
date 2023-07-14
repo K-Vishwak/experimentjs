@@ -1,0 +1,33 @@
+<style>
+  .tooltip {
+    position: relative;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    display: inline-block;
+  }
+  .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+<button class="tooltip">
+  Hover over me
+  <span class="tooltiptext">This is a tooltip</span>
+</button>

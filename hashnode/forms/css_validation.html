@@ -1,0 +1,41 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .html-validation {
+        margin: auto;
+        width: 30%;
+        border: 1px solid green;
+        box-shadow: 5px 5px 8px green;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    label {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: block;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0px;
+        border-radius: 10px;
+    }
+
+    input:invalid {
+        border: 1px solid red;
+    }
+
+    input:valid {
+        border: 1px solid green;
+    }
+
+</style>
+<form class="html-validation" action="#0" method="post">
+        <label for="firstName">First Name</label>
+        <input name="firstName" type="text" required>
+        <input type="submit">
+</form>

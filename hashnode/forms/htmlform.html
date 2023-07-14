@@ -1,59 +1,111 @@
 <style>
-    * {
-        box-sizing: border-box;
-    }
+  * {
+    box-sizing: border-box;
+  }
 
-    .html-validation {
-        margin: auto;
-        width: 30%;
-        border: 1px solid green;
-        box-shadow: 5px 5px 8px green;
-        border-radius: 5px;
-        padding: 20px;
-    }
+  .html-validation {
+    margin: auto;
+    width: 30%;
+    border: 1px solid green;
+    box-shadow: 5px 5px 8px green;
+    border-radius: 5px;
+    padding: 20px;
+  }
 
-    label {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        display: block;
-        text-align: center;
-    }
+  label {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    text-align: center;
+  }
 
-    input {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0px;
-        border-radius: 10px;
-        border: 1px solid green;
-    }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    border: 1px solid green;
+  }
+
+  input:invalid {
+    border: 1px solid;
+  }
+
+  input:valid {
+    border: 1px solid aqua;
+  }
 </style>
 
 <form class="html-validation">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="I accept any text...">
+  <label for="name">Name</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    placeholder="I accept any text..."
+    required
+  />
 
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="I show every entered character as dot...">
+  <label for="password">Password</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    placeholder="I show every entered character as dot..."
+  />
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="I accept only valid mail as it should contain @...">
+  <label for="email">Email</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="I accept only valid mail as it should contain @..."
+  />
 
-    <label for="required">Required Input</label>
-    <input type="text" id="required" name="required"
-        placeholder="You must enter value here before submitting..." required>
+  <label for="required">Required Input</label>
+  <input
+    type="text"
+    id="required"
+    name="required"
+    placeholder="You must enter value here before submitting..."
+    required
+  />
 
-    <label for="minLength">Minimum Charcter Input</label>
-    <input type="text" id="minLength" name="minLength" placeholder="Must enter min 4 chars here before submitting..."
-        minLength="4">
+  <label for="minLength">Minimum Charcter Input</label>
+  <input
+    type="text"
+    id="minLength"
+    name="minLength"
+    placeholder="Must enter min 4 chars here before submitting..."
+    minlength="4"
+  />
 
-    <label for="maxLength">Maximum Charcter Input</label>
-    <input type="text" id="maxLength" name="maxLength" placeholder="Must enter less than 4 chars here..." maxLength="4">
+  <label for="maxLength">Maximum Charcter Input</label>
+  <input
+    type="text"
+    id="maxLength"
+    name="maxLength"
+    placeholder="Must enter less than 4 chars here..."
+    maxlength="4"
+  />
 
-    <label for="range">Min and Max </label>
-    <input type="number" id="range" name="range" placeholder="I allow numbers between 2 to 4 (both included)" max="4" min="2">
+  <label for="range">Min and Max </label>
+  <input
+    type="number"
+    id="range"
+    name="range"
+    placeholder="I allow numbers between 2 to 4 (both included)"
+    max="4"
+    min="2"
+  />
 
-    <label for="pattern">Pattern check</label>
-    <input type="text" id="pattern" name="pattern" placeholder="I follow pattern - .{4,} to allow characters..." pattern=".{4,}">
+  <label for="pattern">Pattern check</label>
+  <input
+    type="text"
+    id="pattern"
+    name="pattern"
+    placeholder="I follow pattern - .{4,} to allow characters..."
+    pattern=".{4,}"
+  />
 
-    <input type="submit" id="submit">
-
+  <input type="submit" id="submit" />
 </form>

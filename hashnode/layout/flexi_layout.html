@@ -1,0 +1,290 @@
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .item,
+    .item_stretch {
+        border: 1px solid lightskyblue;
+        background-color: lightcyan;
+        height: 100px;
+        flex-grow: 1;
+    }
+
+    .item_stretch {
+        flex-grow: 2;
+    }
+
+    /* .item+.item {
+        margin-left: 2%;
+    } */
+
+    .item+.item_stretch {
+        margin-left: 2%;
+    }
+
+    .item_stretch+.item {
+        margin-left: 2%;
+    }
+
+    .container1 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .item1 {
+        border: 1px solid lightskyblue;
+        background-color: lightcyan;
+        width: 49%;
+        height: 100px;
+        margin-bottom: 2%;
+    }
+
+    .item1:nth-child(3n) {
+        width: 100%;
+    }
+
+    .container2 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .item2 {
+        border: 1px solid lightskyblue;
+        background-color: lightcyan;
+        /* flex: 0  32%; */
+        width: 32%;
+        height: 100px;
+        margin-bottom: 2%;
+    }
+
+    .container3 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .item3 {
+        border: 1px solid lightskyblue;
+        background-color: lightcyan;
+        width: 32%;
+        padding-bottom: 18%;
+        height: 100px;
+        margin-bottom: 2%;
+    }
+
+    .container4 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 300px;
+    }
+
+    .item4 {
+        border: 1px solid lightskyblue;
+        background-color: lightcyan;
+        width: 14%;
+    }
+
+    .item4+.item4 {
+        margin-left: 2%;
+    }
+
+    .item_1 {
+        height: 20%;
+    }
+
+    .item_2 {
+        height: 40%;
+    }
+
+    .item_3 {
+        height: 20%;
+    }
+
+    .item_4 {
+        height: 30%;
+    }
+
+    .item_5 {
+        height: 10%;
+    }
+
+    .item_6 {
+        height: 15%;
+    }
+
+    .item_7 {
+        height: 25%;
+    }
+
+    .item_8 {
+        height: 35%;
+    }
+
+    .item_9 {
+        height: 45%;
+    }
+
+    .container5 {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        flex-direction: column;
+    }
+
+    .item5 {
+        border: 1px solid lightskyblue;
+        background-color: lightcyan;
+        height: 100px;
+        margin-bottom: 2%;
+    }
+
+    .item_5_1 {
+        width: 25%;
+    }
+
+    .item_5_2 {
+        width: 35%;
+    }
+
+    .item_5_3 {
+        width: 45%;
+    }
+
+    .item_5_4 {
+        width: 55%;
+    }
+
+    .item_5_5 {
+        width: 45%;
+    }
+
+    .item_5_6 {
+        width: 35%;
+    }
+
+    .item_5_7 {
+        width: 25%;
+    }
+
+    .item_5_8 {
+        width: 15%;
+    }
+
+    .item_5_9 {
+        width: 5%;
+    }
+
+    .container6 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item6 {
+        background-color: skyblue;
+        border: 1px solid lightcyan;
+        height: 50px;
+        width: 500px;
+    }
+</style>
+<h1>Regular Flex Layout</h1>
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+</div>
+
+<hr>
+<h1>Stretch One Item</h1>
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item_stretch">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+</div>
+
+<hr>
+<h1>Alternating Grid</h1>
+<div class="container1">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+    <div class="item1">6</div>
+</div>
+
+<hr>
+<h1>3 * 3 Grid</h1>
+<div class="container2">
+    <div class="item2">1</div>
+    <div class="item2">2</div>
+    <div class="item2">3</div>
+    <div class="item2">4</div>
+    <div class="item2">5</div>
+    <div class="item2">6</div>
+</div>
+
+<hr>
+<h1>3 * 3 Grid, constrained proportions</h1>
+<div class="container3">
+    <div class="item3">1</div>
+    <div class="item3">2</div>
+    <div class="item3">3</div>
+    <div class="item3">4</div>
+    <div class="item3">5</div>
+    <div class="item3">6</div>
+    <div class="item3">7</div>
+    <div class="item3">8</div>
+    <div class="item3">9</div>
+</div>
+
+<hr>
+<h1>Vertical Bars</h1>
+<div class="container4">
+    <div class="item4 item_1">1</div>
+    <div class="item4 item_2">2</div>
+    <div class="item4 item_3">3</div>
+    <div class="item4 item_4">4</div>
+    <div class="item4 item_5">5</div>
+    <div class="item4 item_6">6</div>
+    <div class="item4 item_7">7</div>
+    <div class="item4 item_8">8</div>
+    <div class="item4 item_9">9</div>
+</div>
+
+<hr>
+<h1>Horizontal Bars</h1>
+<div class="container5">
+    <div class="item5 item_5_1">1</div>
+    <div class="item5 item_5_2">2</div>
+    <div class="item5 item_5_3">3</div>
+    <div class="item5 item_5_4">4</div>
+    <div class="item5 item_5_5">5</div>
+    <div class="item5 item_5_6">6</div>
+    <div class="item5 item_5_7">7</div>
+    <div class="item5 item_5_8">8</div>
+    <div class="item5 item_5_9">9</div>
+</div>
+
+<hr>
+<h1>Vertical Stack</h1>
+<div class="container6">
+    <div class="item6">1</div>
+    <div class="item6">2</div>
+    <div class="item6">3</div>
+    <div class="item6">4</div>
+    <div class="item6">5</div>
+    <div class="item6">6</div>
+    <div class="item6">7</div>
+    <div class="item6">8</div>
+    <div class="item6">9</div>
+</div>
